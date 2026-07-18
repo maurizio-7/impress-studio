@@ -1,4 +1,46 @@
+import React, { useState } from "react";
+
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    businessName: "",
+    email: "",
+    phone: "",
+    services: "",
+    message: "",
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+
+  function handleServiceChange(event) {
+    const { value, checked } = event.target;
+
+    if (checked) {
+      setFormData({
+        ...formData,
+        services: [...formData.services, value],
+      });
+    } else {
+      setFormData({
+        ...formData,
+        services: formData.services.filter((service) => service !== value),
+      });
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(formData);
+    alert("Thank you, We have received your enquiry");
+  }
+
   return (
     <main>
       {/* Hero */}
@@ -52,12 +94,16 @@ function Contact() {
 
           {/* Right Side */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block font-medium mb-2">Full Name</label>
 
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   placeholder="James Banda"
                   className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
@@ -68,6 +114,9 @@ function Contact() {
 
                 <input
                   type="text"
+                  name="businessName"
+                  value={formData.businessName}
+                  onChange={handleChange}
                   placeholder="ABC Construction Ltd"
                   className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
@@ -78,6 +127,10 @@ function Contact() {
 
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   placeholder="you@example.com"
                   className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
@@ -88,6 +141,10 @@ function Contact() {
 
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
                   placeholder="+260 XXX XXX XXX"
                   className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
@@ -98,8 +155,16 @@ function Contact() {
                   Which service are you interested in?
                 </label>
 
-                <select className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                  <option>Select a service</option>
+                <select
+                  name="services"
+                  value={formData.services}
+                  onChange={handleChange}
+                  required
+                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                >
+                  <option value="" disabled hidden>
+                    Select a service
+                  </option>
                   <option>Business Profile</option>
                   <option>Digital Business Card</option>
                   <option>NFC Business Card</option>
@@ -115,6 +180,9 @@ function Contact() {
                 </label>
 
                 <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="5"
                   placeholder="Tell us what you're looking for..."
                   className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
