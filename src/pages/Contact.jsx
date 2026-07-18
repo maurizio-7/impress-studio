@@ -35,10 +35,30 @@ function Contact() {
     }
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
-    alert("Thank you, We have received your enquiry");
+
+    try {
+      const response = await fetch("http://localhost:3000/api/enquiries", {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      console.log(data);
+
+      alert("Thank you, we have received your enquiry");
+    } catch (error) {
+      console.error(error);
+
+      alert("Something went wrong");
+    }
   }
 
   return (
