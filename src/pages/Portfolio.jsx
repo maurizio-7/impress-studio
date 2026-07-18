@@ -147,7 +147,7 @@ function Portfolio() {
         </div>
       </section>
 
-      <CallToAction />
+      {/* <CallToAction /> */}
     </main>
   );
 }

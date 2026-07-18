@@ -126,7 +126,7 @@ function Home() {
         </div>
       </section>
 
-      <CallToAction />
+      {/* <CallToAction /> */}
     </div>
   );
 }

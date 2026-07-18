@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -16,13 +17,19 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <button className="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700"
+            >
               Get A Free Quote
-            </button>
+            </Link>
 
-            <button className="px-8 py-4 border border-gray-300 rounded-xl font-semibold hover:bg-gray-100">
+            <Link
+              to="/portfolio"
+              className="px-8 py-4 border border-gray-300 rounded-xl font-semibold hover:bg-gray-100"
+            >
               View Our Work
-            </button>
+            </Link>
           </div>
         </div>
 

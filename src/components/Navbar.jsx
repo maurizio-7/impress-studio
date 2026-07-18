@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -9,31 +10,32 @@ function Navbar() {
           {/* Logo */}
           <div>
             <h1 className="text-2xl font-bold text-gray-900">
-              <a href="/">Kulani</a>
+              <Link to="/">Kulani</Link>
             </h1>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="/" className="text-gray-600 hover:text-blue-600">
+            <Link to="/" className="text-gray-600 hover:text-blue-600">
               Home
-            </a>
+            </Link>
 
-            <a href="/services" className="text-gray-600 hover:text-blue-600">
+            <Link to="/services" className="text-gray-600 hover:text-blue-600">
               Services
-            </a>
+            </Link>
 
-            <a href="/portfolio" className="text-gray-600 hover:text-blue-600">
+            <Link to="/portfolio" className="text-gray-600 hover:text-blue-600">
               Portfolio
-            </a>
+            </Link>
 
-            <a href="/contact" className="text-gray-600 hover:text-blue-600">
+            <Link to="/contact" className="text-gray-600 hover:text-blue-600">
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* CTA Button */}
-          <button
+          <Link
+            to="/contact"
             className="
           hidden md:block
           bg-blue-600
@@ -46,7 +48,7 @@ function Navbar() {
         "
           >
             Get Started
-          </button>
+          </Link>
         </div>
       </nav>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold">
-              <a href="/">Kulani</a>
+              <Link to="/">Kulani</Link>
             </h2>
 
             <p className="mt-4 text-gray-400">
@@ -38,19 +39,19 @@ function Footer() {
 
             <ul className="mt-4 space-y-3 text-gray-400">
               <li>
-                <a href="/services" className="hover:text-blue-600">
+                <Link to="/services" className="hover:text-blue-600">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/portfolio" className="hover:text-blue-600">
+                <Link to="/portfolio" className="hover:text-blue-600">
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-blue-600">
+                <Link to="/contact" className="hover:text-blue-600">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -72,7 +73,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Impress Studio. All rights reserved.
+            © {new Date().getFullYear()} Kulani. All rights reserved.
           </p>
         </div>
       </div>
