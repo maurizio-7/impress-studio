@@ -1,16 +1,75 @@
-# React + Vite
+# Impress Studio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern business website built with React to showcase digital identity solutions for businesses in Zambia. The platform helps businesses establish a professional online presence through digital business cards, QR code profiles, NFC-enabled cards, email signatures, and business guides.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive modern design
+- Home page with business overview
+- Services page
+- Portfolio showcasing previous work
+- Contact page with enquiry form
+- React Router navigation
+- Reusable React components
+- Mobile-friendly layout
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
-## Expanding the ESLint configuration
+## Services Offered
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Digital Business Profiles
+- QR Code Business Cards
+- NFC Business Cards
+- Email Signatures
+- Business Guides
+- Digital Branding Solutions
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+```
+
+Navigate into the project:
+
+```bash
+cd YOUR_REPOSITORY
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Future Improvements
+
+- Backend contact form with email notifications
+- CMS for portfolio management
+- Blog for SEO
+- Client testimonials
+- Online ordering for digital business cards
+- User authentication
+- Admin dashboard
+- Analytics integration
+
+Purpose
+This project was created to help businesses in Zambia establish a professional digital presence through affordable, modern branding solutions.
+
+Web Developer | React Developer | Digital Solutions
+
+GitHub: https://github.com/maurizio-7
