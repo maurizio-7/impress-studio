@@ -8,7 +8,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold">
-              <a href="/">Impress Studio</a>
+              <a href="/">Kulani</a>
             </h2>
 
             <p className="mt-4 text-gray-400">
@@ -62,7 +62,7 @@ function Footer() {
             <ul className="mt-4 space-y-3 text-gray-400">
               <li>Lusaka, Zambia</li>
 
-              <li>info@impressstudio.com</li>
+              <li>info@kulani.com</li>
 
               <li>+260 763 955 838</li>
             </ul>

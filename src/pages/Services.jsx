@@ -1,4 +1,5 @@
 import React from "react";
+import CallToAction from "../components/CallToAction";
 
 function Services() {
   const services = [
@@ -181,23 +182,7 @@ function Services() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto bg-blue-600 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white">
-            Ready To Improve Your Business Presence?
-          </h2>
-
-          <p className="mt-4 text-blue-100">
-            Contact us today and create a professional identity your customers
-            can trust.
-          </p>
-
-          <button className="mt-8 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold">
-            Get Started
-          </button>
-        </div>
-      </section>
+      <CallToAction />
     </main>
   );
 }

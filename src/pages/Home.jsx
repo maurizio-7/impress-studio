@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import Hero from "../components/Hero";
 import ClientBanner from "../components/ClientBanner";
+import CallToAction from "../components/CallToAction";
 
 function Home() {
   return (
@@ -125,22 +126,7 @@ function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto bg-blue-600 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white">
-            Ready To Upgrade Your Business?
-          </h2>
-
-          <p className="mt-4 text-blue-100">
-            Contact us today and create a professional brand customers trust.
-          </p>
-
-          <button className="mt-8 px-8 py-4 bg-white text-blue-600 rounded-xl font-bold">
-            Get Started
-          </button>
-        </div>
-      </section>
+      <CallToAction />
     </div>
   );
 }

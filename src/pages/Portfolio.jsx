@@ -1,4 +1,5 @@
 import React from "react";
+import CallToAction from "../components/CallToAction";
 
 function Portfolio() {
   const projects = [
@@ -146,23 +147,7 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6">
-        <div className="max-w-5xl mx-auto bg-blue-600 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold text-white">
-            Want Your Business To Look This Professional?
-          </h2>
-
-          <p className="mt-4 text-blue-100">
-            Let's create a digital identity that helps customers discover and
-            trust your business.
-          </p>
-
-          <button className="mt-8 px-8 py-4 bg-white text-blue-600 rounded-xl font-bold">
-            Start Your Project
-          </button>
-        </div>
-      </section>
+      <CallToAction />
     </main>
   );
 }

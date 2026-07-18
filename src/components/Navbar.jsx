@@ -9,7 +9,7 @@ function Navbar() {
           {/* Logo */}
           <div>
             <h1 className="text-2xl font-bold text-gray-900">
-              <a href="/">Impress Studio</a>
+              <a href="/">Kulani</a>
             </h1>
           </div>
 

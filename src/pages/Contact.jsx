@@ -10,6 +10,9 @@ function Contact() {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -37,6 +40,7 @@ function Contact() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    setError("");
 
     try {
       const response = await fetch("http://localhost:3000/api/enquiries", {
@@ -53,11 +57,19 @@ function Contact() {
 
       console.log(data);
 
-      alert("Thank you, we have received your enquiry");
+      setSubmitted(true);
+      setFormData({
+        name: "",
+        businessName: "",
+        email: "",
+        phone: "",
+        services: "",
+        message: "",
+      });
     } catch (error) {
       console.error(error);
 
-      alert("Something went wrong");
+      setError("Something went wrong. Please try again or contact us directly");
     }
   }
 
@@ -95,7 +107,7 @@ function Contact() {
               <div>
                 <h3 className="font-semibold text-lg">📧 Email</h3>
 
-                <p className="text-gray-600">info@impressstudio.com</p>
+                <p className="text-gray-600">info@kulani.com</p>
               </div>
 
               <div>
@@ -114,108 +126,144 @@ function Contact() {
 
           {/* Right Side */}
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block font-medium mb-2">Full Name</label>
+            {submitted ? (
+              <div className="text-center py-12">
+                <div className="text-5xl mb-6">✅</div>
 
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  placeholder="James Banda"
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
+                <h2 className="text-3xl font-bold text-gray-900">Thank You!</h2>
+
+                <p className="mt-4 text-gray-600">
+                  We have received your enquiry and will get back to you within
+                  24 hours.
+                </p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="block font-medium mb-2">Full Name</label>
 
-              <div>
-                <label className="block font-medium mb-2">Business Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="James Banda"
+                    className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
 
-                <input
-                  type="text"
-                  name="businessName"
-                  value={formData.businessName}
-                  onChange={handleChange}
-                  placeholder="ABC Construction Ltd"
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
-              </div>
+                <div>
+                  <label className="block font-medium mb-2">
+                    Business Name
+                  </label>
 
-              <div>
-                <label className="block font-medium mb-2">Email Address</label>
+                  <input
+                    type="text"
+                    name="businessName"
+                    value={formData.businessName}
+                    onChange={handleChange}
+                    placeholder="ABC Construction Ltd"
+                    className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
 
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="you@example.com"
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
-              </div>
+                <div>
+                  <label className="block font-medium mb-2">
+                    Email Address
+                  </label>
 
-              <div>
-                <label className="block font-medium mb-2">Phone Number</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="you@example.com"
+                    className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
 
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  placeholder="+260 XXX XXX XXX"
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                />
-              </div>
+                <div>
+                  <label className="block font-medium mb-2">Phone Number</label>
 
-              <div>
-                <label className="block font-medium mb-2">
-                  Which service are you interested in?
-                </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="+260 XXX XXX XXX"
+                    className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  />
+                </div>
 
-                <select
-                  name="services"
-                  value={formData.services}
-                  onChange={handleChange}
-                  required
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                <div>
+                  <label className="block font-medium mb-2">
+                    Which service are you interested in?
+                  </label>
+
+                  <select
+                    name="services"
+                    value={formData.services}
+                    onChange={handleChange}
+                    required
+                    className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  >
+                    <option value="" disabled hidden>
+                      Select a service
+                    </option>
+                    <option>Business Profile</option>
+                    <option>Digital Business Card</option>
+                    <option>NFC Business Card</option>
+                    <option>QR Code Solution</option>
+                    <option>Branding</option>
+                    <option>Multiple Services</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block font-medium mb-2">
+                    Tell us about your project
+                  </label>
+
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="5"
+                    placeholder="Tell us what you're looking for..."
+                    className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                  ></textarea>
+                </div>
+
+                {submitted && (
+                  <div className="bg-green-100 border border-green-300 text-green-800 px-4 py-4 rounded-lg">
+                    <h3 className="font-semibold">
+                      Thank you for contacting us!
+                    </h3>
+
+                    <p className="mt-1">
+                      We have received your enquiry and will get back to you
+                      within 24 hours.
+                    </p>
+                  </div>
+                )}
+
+                {error && (
+                  <div className="bg-red-100 border border-red-300 text-red-700 px-4 py-4 rounded-lg">
+                    {error}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition"
                 >
-                  <option value="" disabled hidden>
-                    Select a service
-                  </option>
-                  <option>Business Profile</option>
-                  <option>Digital Business Card</option>
-                  <option>NFC Business Card</option>
-                  <option>QR Code Solution</option>
-                  <option>Branding</option>
-                  <option>Multiple Services</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block font-medium mb-2">
-                  Tell us about your project
-                </label>
-
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="5"
-                  placeholder="Tell us what you're looking for..."
-                  className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition"
-              >
-                Send Enquiry
-              </button>
-            </form>
+                  Send Enquiry
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </section>
