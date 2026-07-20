@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import Hero from "../components/Hero";
 import ClientBanner from "../components/ClientBanner";
 import CallToAction from "../components/CallToAction";
@@ -11,19 +10,21 @@ function Home() {
       <ClientBanner />
 
       {/* Services Section */}
-      <section className="py-20 px-6 lg:px-20 bg-gray-50">
+      <section className="section bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900">
+          <h2 className="text-4xl font-bold text-center text-brand-navy">
             Our Services
           </h2>
 
-          <p className="mt-4 text-center text-gray-600">
+          <p className="mt-4 text-center text-gray-500">
             Professional branding solutions designed for growing businesses.
           </p>
 
           <div className="mt-12 grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow">
-              <h3 className="text-xl font-semibold">Business Profiles</h3>
+            <div className="card">
+              <h3 className="text-xl font-semibold text-brand-navy">
+                Business Profiles
+              </h3>
 
               <p className="mt-3 text-gray-600">
                 Showcase your company professionally with a digital profile that
@@ -31,8 +32,10 @@ function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow">
-              <h3 className="text-xl font-semibold">Digital Business Cards</h3>
+            <div className="card">
+              <h3 className="text-xl font-semibold text-brand-navy">
+                Digital Business Cards
+              </h3>
 
               <p className="mt-3 text-gray-600">
                 Modern business cards with QR codes and NFC technology that make
@@ -40,8 +43,10 @@ function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl shadow">
-              <h3 className="text-xl font-semibold">Branding Solutions</h3>
+            <div className="card">
+              <h3 className="text-xl font-semibold text-brand-navy">
+                Branding Solutions
+              </h3>
 
               <p className="mt-3 text-gray-600">
                 Improve your business identity with professional designs that
@@ -53,35 +58,35 @@ function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 px-6 lg:px-20">
+      <section className="section bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 text-center">
+          <h2 className="text-4xl font-bold text-brand-navy text-center">
             Why Choose Us?
           </h2>
 
           <div className="mt-12 grid md:grid-cols-4 gap-6">
-            <div>
+            <div className="card">
               <h3 className="font-bold text-xl">Professional Design</h3>
               <p className="mt-2 text-gray-600">
                 Premium designs that make your business look credible.
               </p>
             </div>
 
-            <div>
+            <div className="card">
               <h3 className="font-bold text-xl">Affordable</h3>
               <p className="mt-2 text-gray-600">
                 Solutions created for small businesses.
               </p>
             </div>
 
-            <div>
+            <div className="card">
               <h3 className="font-bold text-xl">Fast Delivery</h3>
               <p className="mt-2 text-gray-600">
                 Receive your professional assets quickly.
               </p>
             </div>
 
-            <div>
+            <div className="card">
               <h3 className="font-bold text-xl">Custom Solutions</h3>
               <p className="mt-2 text-gray-600">
                 Designed around your business needs.
@@ -92,34 +97,40 @@ function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6 lg:px-20 bg-gray-50">
+      <section className="section bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center">How It Works</h2>
+          <h2 className="text-4xl font-bold text-center text-brand-navy">
+            How It Works
+          </h2>
 
           <div className="mt-12 grid md:grid-cols-4 gap-8">
             <div>
-              <span className="text-blue-600 font-bold text-3xl">01</span>
-              <h3 className="mt-3 font-bold">Contact Us</h3>
+              <span className="text-brand-yellow font-bold text-4xl">01</span>
+              <h3 className="mt-3 font-bold text-brand-navy text-xl">
+                Contact Us
+              </h3>
               <p className="text-gray-600">Tell us about your business.</p>
             </div>
 
             <div>
-              <span className="text-blue-600 font-bold text-3xl">02</span>
-              <h3 className="mt-3 font-bold">Design</h3>
+              <span className="text-brand-yellow font-bold text-4xl">02</span>
+              <h3 className="mt-3 font-bold text-brand-navy text-xl">Design</h3>
               <p className="text-gray-600">
                 We create your professional assets.
               </p>
             </div>
 
             <div>
-              <span className="text-blue-600 font-bold text-3xl">03</span>
-              <h3 className="mt-3 font-bold">Review</h3>
+              <span className="text-brand-yellow font-bold text-4xl">03</span>
+              <h3 className="mt-3 font-bold text-brand-navy text-xl">Review</h3>
               <p className="text-gray-600">You provide feedback.</p>
             </div>
 
             <div>
-              <span className="text-blue-600 font-bold text-3xl">04</span>
-              <h3 className="mt-3 font-bold">Delivery</h3>
+              <span className="text-brand-yellow font-bold text-4xl">04</span>
+              <h3 className="mt-3 font-bold text-brand-navy text-xl">
+                Delivery
+              </h3>
               <p className="text-gray-600">Receive your finished materials.</p>
             </div>
           </div>

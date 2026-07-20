@@ -54,32 +54,20 @@ function Services() {
 
   return (
     <main>
-      {/* Hero */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-            Professional Digital Solutions For Growing Businesses
-          </h1>
-
-          <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-600">
-            We help businesses create a stronger identity with professional
-            profiles, digital business cards, branding materials and modern
-            solutions that make it easier for customers to connect with them.
-          </p>
-        </div>
-      </section>
-
       {/* Services */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900">
+          <h2 className="text-4xl font-bold text-center text-brand-navy">
             Our Services
           </h2>
 
           <div className="mt-12 grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900">
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-399 border border-gray-100"
+              >
+                <h3 className="text-2xl font-bold text-brand-navy">
                   {service.title}
                 </h3>
 
@@ -91,7 +79,9 @@ function Services() {
                       key={index}
                       className="flex items-center gap-3 text-gray-700"
                     >
-                      <span className="text-blue-600">✓</span>
+                      <span className="text-brand-orange font-bold text-lg">
+                        ✓
+                      </span>
 
                       {feature}
                     </li>
@@ -104,9 +94,9 @@ function Services() {
       </section>
 
       {/* Why Section */}
-      <section className="py-20 px-6">
+      <section className="section bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-4xl font-bold text-brand-navy">
             Why Your Business Needs A Strong Digital Identity
           </h2>
 
@@ -117,8 +107,16 @@ function Services() {
           </p>
 
           <div className="mt-12 grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold">Build Trust</h3>
+            <div
+              className="
+              bg-gray-50
+              p-8
+              rounded-2xl
+              hover:shadow-lg
+              transition
+            "
+            >
+              <h3 className="text-xl font-bold text-brand-navy">Build Trust</h3>
 
               <p className="mt-3 text-gray-600">
                 Professional branding helps customers take your business
@@ -126,16 +124,34 @@ function Services() {
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold">Stand Out</h3>
+            <div
+              className="
+              bg-gray-50
+              p-8
+              rounded-2xl
+              hover:shadow-lg
+              transition
+            "
+            >
+              <h3 className="text-xl font-bold text-brand-navy">Stand Out</h3>
 
               <p className="mt-3 text-gray-600">
                 Create a memorable identity in a competitive market.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold">Connect Faster</h3>
+            <div
+              className="
+              bg-gray-50
+              p-8
+              rounded-2xl
+              hover:shadow-lg
+              transition
+            "
+            >
+              <h3 className="text-xl font-bold text-brand-navy">
+                Connect Faster
+              </h3>
 
               <p className="mt-3 text-gray-600">
                 Make it easier for customers to find and contact you.
@@ -146,36 +162,133 @@ function Services() {
       </section>
 
       {/* Process */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="section bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center">Our Process</h2>
 
           <div className="mt-12 grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-bold text-xl">01. Consultation</h3>
+            <div
+              className="
+              bg-white/10
+              backdrop-blur
+              rounded-2xl
+              p-8
+              border
+              border-white/10
+            "
+            >
+              <span
+                className="
+                text-brand-yellow text-5xl font-bold
+              "
+              >
+                {" "}
+                01
+              </span>
+              <h3
+                className="
+              mt-4 
+              text-brand-navy 
+              text-xl 
+              font-bold"
+              >
+                Consultation
+              </h3>
               <p className="mt-3 text-gray-600">
                 We understand your business and requirements.
               </p>
             </div>
-
-            <div>
-              <h3 className="font-bold text-xl">02. Design</h3>
+            <div
+              className="
+              bg-white/10
+              backdrop-blur
+              rounded-2xl
+              p-8
+              border
+              border-white/10
+            "
+            >
+              <span
+                className="
+                text-brand-yellow text-5xl font-bold
+              "
+              >
+                {" "}
+                02
+              </span>
+              <h3
+                className="
+              mt-4 
+              text-brand-navy 
+              text-xl 
+              font-bold"
+              >
+                Design
+              </h3>
               <p className="mt-3 text-gray-600">
                 We create solutions tailored to your brand.
               </p>
             </div>
-
-            <div>
-              <h3 className="font-bold text-xl">03. Review</h3>
+            <div
+              className="
+              bg-white/10
+              backdrop-blur
+              rounded-2xl
+              p-8
+              border
+              border-white/10
+            "
+            >
+              <span
+                className="
+                text-brand-yellow text-5xl font-bold
+              "
+              >
+                {" "}
+                03
+              </span>
+              <h3
+                className="
+              mt-4 
+              text-brand-navy 
+              text-xl 
+              font-bold"
+              >
+                Review
+              </h3>
               <p className="mt-3 text-gray-600">
                 You provide feedback and approve the design.
               </p>
             </div>
-
-            <div>
-              <h3 className="font-bold text-xl">04. Delivery</h3>
+            <div
+              className="
+              bg-white/10
+              backdrop-blur
+              rounded-2xl
+              p-8
+              border
+              border-white/10
+            "
+            >
+              <span
+                className="
+                text-brand-yellow text-5xl font-bold
+              "
+              >
+                {" "}
+                04
+              </span>
+              <h3
+                className="
+              mt-4 
+              text-brand-navy 
+              text-xl 
+              font-bold"
+              >
+                Delivery
+              </h3>
               <p className="mt-3 text-gray-600">
-                Receive your completed business assets.
+                Receive your completed business assests.
               </p>
             </div>
           </div>

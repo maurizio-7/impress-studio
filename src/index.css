@@ -1,5 +1,74 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-navy: #2d4059;
+  --color-brand-yellow: #ffd460;
+  --color-brand-orange: #f07b3f;
+  --color-brand-coral: #ea5455;
+
+  --font-display: "Inter", sans-serif;
+}
+
+/* Global Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: white;
+  color: #2d4059;
+}
+
+/* Reusable Components */
+
+@layer components {
+  /* Primary Button */
+
+  .btn-primary {
+    @apply bg-brand-yellow text-brand-navy font-semibold px-6 py-3 rounded-lg transition duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply bg-brand-orange text-white;
+  }
+
+  /* Secondary Button */
+
+  .btn-secondary {
+    @apply bg-brand-orange text-white font-semibold px-6 py-3 rounded-lg transition duration-300;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-brand-coral;
+  }
+
+  /* Section */
+
+  .section {
+    @apply py-20 px-6;
+  }
+
+  /* Container */
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-8 transition duration-300;
+  }
+
+  .card:hover {
+    @apply -translate-y-2;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow;
+  }
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);
