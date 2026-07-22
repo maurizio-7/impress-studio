@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Reveal from "../components/Reveal";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -65,7 +66,7 @@ function Contact() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-brand-navy py-24 px-6">
+      <section className="bg-brand-dark py-24 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white">
             Let's Build Your Business Identity
@@ -79,11 +80,12 @@ function Contact() {
       </section>
 
       {/* Contact Form */}
-      <section className="section bg-gray-50">
+      <Reveal>
+<section className="section bg-gray-50">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
           {/* Left Side */}
           <div>
-            <h2 className="text-4xl font-bold text-brand-navy">
+            <h2 className="text-4xl font-bold text-brand-dark">
               Tell Us About Your Project
             </h2>
 
@@ -133,7 +135,7 @@ function Contact() {
                   ✅
                 </div>
 
-                <h2 className="text-3xl font-bold text-brand-navyå">
+                <h2 className="text-3xl font-bold text-brand-dark">
                   Thank You!
                 </h2>
 
@@ -145,7 +147,7 @@ function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block font-semibold text-brand-navy mb-2">
+                  <label className="block font-semibold text-brand-dark mb-2">
                     Full Name
                   </label>
 
@@ -156,12 +158,12 @@ function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="James Banda"
-                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow transition"
+                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-brand-navy mb-2">
+                  <label className="block font-semibold text-brand-dark mb-2">
                     Business Name
                   </label>
 
@@ -171,12 +173,12 @@ function Contact() {
                     value={formData.businessName}
                     onChange={handleChange}
                     placeholder="ABC Construction Ltd"
-                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow transition"
+                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-brand-navy mb-2">
+                  <label className="block font-semibold text-brand-dark mb-2">
                     Email Address
                   </label>
 
@@ -187,12 +189,12 @@ function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="you@example.com"
-                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow transition"
+                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-brand-navy mb-2">
+                  <label className="block font-semibold text-brand-dark mb-2">
                     Phone Number
                   </label>
 
@@ -203,12 +205,12 @@ function Contact() {
                     onChange={handleChange}
                     required
                     placeholder="+260 XXX XXX XXX"
-                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow transition"
+                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive transition"
                   />
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-brand-navy mb-2">
+                  <label className="block font-semibold text-brand-dark mb-2">
                     Which service are you interested in?
                   </label>
 
@@ -217,7 +219,7 @@ function Contact() {
                     value={formData.services}
                     onChange={handleChange}
                     required
-                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow transition"
+                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive transition"
                   >
                     <option value="" disabled hidden>
                       Select a service
@@ -230,7 +232,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label className="block font-semibold text-brand-navy mb-2">
+                  <label className="block font-semibold text-brand-dark mb-2">
                     Tell us about your project
                   </label>
 
@@ -240,17 +242,17 @@ function Contact() {
                     onChange={handleChange}
                     rows="5"
                     placeholder="Tell us what you're looking for..."
-                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:border-brand-yellow transition"
+                    className="w-full border border-gray-300 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive transition"
                   ></textarea>
                 </div>
 
                 {error && (
                   <div
                     className="
-                  bg-brand-coral/10
+                  bg-red-50
                   border
-                  border-brand-coral 
-                  text-brand-coral
+                  border-red-600
+                  text-red-600
                   px-4
                   py-4
                   rounded-xl
@@ -262,7 +264,7 @@ function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-brand-yellow text-brand-navy py-4 rounded-lg font-semibold hover:bg-brand-orange transition"
+                  className="w-full btn-primary py-4"
                 >
                   Send Enquiry
                 </button>
@@ -271,6 +273,7 @@ function Contact() {
           </div>
         </div>
       </section>
+</Reveal>
     </main>
   );
 }

@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CallToAction from "../components/CallToAction";
+import Reveal from "../components/Reveal";
 
 function Services() {
   const services = [
@@ -38,14 +40,28 @@ function Services() {
         "Professional design",
       ],
     },
+
+    {
+      title: "Custom Solutions",
+      description:
+        "Don't see exactly what you're looking for? We build tailored digital solutions for businesses with unique needs — get in touch and let's talk about it.",
+      features: [
+        "Tailored to your business",
+        "Flexible scope",
+        "Direct consultation",
+        "No project too unique",
+      ],
+      isCustom: true,
+    },
   ];
 
   return (
     <main>
       {/* Services */}
-      <section className="section bg-gray-50">
+      <Reveal>
+<section className="section bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-brand-navy">
+          <h2 className="text-4xl font-bold text-center text-brand-dark">
             Our Services
           </h2>
 
@@ -53,9 +69,9 @@ function Services() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-399 border border-gray-100"
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
               >
-                <h3 className="text-2xl font-bold text-brand-navy">
+                <h3 className="text-2xl font-bold text-brand-dark">
                   {service.title}
                 </h3>
 
@@ -67,7 +83,7 @@ function Services() {
                       key={index}
                       className="flex items-center gap-3 text-gray-700"
                     >
-                      <span className="text-brand-orange font-bold text-lg">
+                      <span className="text-brand-accent font-bold text-lg">
                         ✓
                       </span>
 
@@ -75,16 +91,27 @@ function Services() {
                     </li>
                   ))}
                 </ul>
+
+                {service.isCustom && (
+                  <Link
+                    to="/contact"
+                    className="mt-6 inline-block text-brand-interactive font-semibold hover:text-brand-interactive-hover transition-colors duration-200"
+                  >
+                    Get in Touch →
+                  </Link>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
+</Reveal>
 
       {/* Why Section */}
-      <section className="section bg-white">
+      <Reveal>
+<section className="section bg-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-brand-navy">
+          <h2 className="text-4xl font-bold text-brand-dark">
             Why Your Business Needs A Strong Digital Identity
           </h2>
 
@@ -104,7 +131,7 @@ function Services() {
               transition
             "
             >
-              <h3 className="text-xl font-bold text-brand-navy">Build Trust</h3>
+              <h3 className="text-xl font-bold text-brand-dark">Build Trust</h3>
 
               <p className="mt-3 text-gray-600">
                 Professional branding helps customers take your business
@@ -121,7 +148,7 @@ function Services() {
               transition
             "
             >
-              <h3 className="text-xl font-bold text-brand-navy">Stand Out</h3>
+              <h3 className="text-xl font-bold text-brand-dark">Stand Out</h3>
 
               <p className="mt-3 text-gray-600">
                 Create a memorable identity in a competitive market.
@@ -137,7 +164,7 @@ function Services() {
               transition
             "
             >
-              <h3 className="text-xl font-bold text-brand-navy">
+              <h3 className="text-xl font-bold text-brand-dark">
                 Connect Faster
               </h3>
 
@@ -148,11 +175,15 @@ function Services() {
           </div>
         </div>
       </section>
+</Reveal>
 
       {/* Process */}
-      <section className="section bg-white">
+      <Reveal>
+<section className="section bg-brand-dark">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center">Our Process</h2>
+          <h2 className="text-4xl font-bold text-center text-white">
+            Our Process
+          </h2>
 
           <div className="mt-12 grid md:grid-cols-4 gap-8">
             <div
@@ -167,7 +198,7 @@ function Services() {
             >
               <span
                 className="
-                text-brand-yellow text-5xl font-bold
+                text-brand-accent text-5xl font-bold
               "
               >
                 {" "}
@@ -176,13 +207,13 @@ function Services() {
               <h3
                 className="
               mt-4 
-              text-brand-navy 
+              text-white 
               text-xl 
               font-bold"
               >
                 Consultation
               </h3>
-              <p className="mt-3 text-gray-600">
+              <p className="mt-3 text-gray-300">
                 We understand your business and requirements.
               </p>
             </div>
@@ -198,7 +229,7 @@ function Services() {
             >
               <span
                 className="
-                text-brand-yellow text-5xl font-bold
+                text-brand-accent text-5xl font-bold
               "
               >
                 {" "}
@@ -207,13 +238,13 @@ function Services() {
               <h3
                 className="
               mt-4 
-              text-brand-navy 
+              text-white 
               text-xl 
               font-bold"
               >
                 Design
               </h3>
-              <p className="mt-3 text-gray-600">
+              <p className="mt-3 text-gray-300">
                 We create solutions tailored to your brand.
               </p>
             </div>
@@ -229,7 +260,7 @@ function Services() {
             >
               <span
                 className="
-                text-brand-yellow text-5xl font-bold
+                text-brand-accent text-5xl font-bold
               "
               >
                 {" "}
@@ -238,13 +269,13 @@ function Services() {
               <h3
                 className="
               mt-4 
-              text-brand-navy 
+              text-white 
               text-xl 
               font-bold"
               >
                 Review
               </h3>
-              <p className="mt-3 text-gray-600">
+              <p className="mt-3 text-gray-300">
                 You provide feedback and approve the design.
               </p>
             </div>
@@ -260,7 +291,7 @@ function Services() {
             >
               <span
                 className="
-                text-brand-yellow text-5xl font-bold
+                text-brand-accent text-5xl font-bold
               "
               >
                 {" "}
@@ -269,19 +300,20 @@ function Services() {
               <h3
                 className="
               mt-4 
-              text-brand-navy 
+              text-white 
               text-xl 
               font-bold"
               >
                 Delivery
               </h3>
-              <p className="mt-3 text-gray-600">
+              <p className="mt-3 text-gray-300">
                 Receive your completed business assets.
               </p>
             </div>
           </div>
         </div>
       </section>
+</Reveal>
 
       {/* <CallToAction /> */}
     </main>

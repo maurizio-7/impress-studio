@@ -19,7 +19,7 @@ function ClientBanner() {
             {clients.map((client, index) => (
               <div
                 key={index}
-                className="text-2xl font-semibold text-brand-navy"
+                className="text-2xl font-semibold text-brand-dark"
               >
                 {client}
               </div>
@@ -29,7 +29,7 @@ function ClientBanner() {
             {clients.map((client, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="text-2xl font-semibold text-brand-navy"
+                className="text-2xl font-semibold text-brand-dark"
               >
                 {client}
               </div>

@@ -1,12 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #2d4059;
-  --color-brand-yellow: #ffd460;
-  --color-brand-orange: #f07b3f;
-  --color-brand-coral: #ea5455;
+  /* Brand palette */
+  --color-brand-dark: #14110e;
+  --color-brand-light: #efeae0;
+  --color-brand-accent: #b8734a;
+  --color-brand-accent-hover: #9a552c;
+  --color-brand-interactive: #2e4bdb;
+  --color-brand-interactive-hover: #0b28b8;
+  --color-brand-structural: #6b6560;
+  --color-brand-text: #1a1714;
 
-  --font-display: "Inter", sans-serif;
+  /* Warm neutral scale, calibrated to the brand palette above,
+     so every existing gray-* utility inherits the new look. */
+  --color-gray-50: #f8f5ef;
+  --color-gray-100: #efeae0;
+  --color-gray-200: #ddd5c5;
+  --color-gray-300: #c7bca8;
+  --color-gray-400: #91887c;
+  --color-gray-500: #6b6560;
+  --color-gray-600: #1a1714;
+  --color-gray-700: #141110;
+  --color-gray-800: #0f0c0a;
+  --color-gray-900: #0a0807;
+
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 /* Global Styles */
@@ -17,8 +36,15 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: white;
-  color: #2d4059;
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fraunces", serif;
 }
 
 /* Reusable Components */
@@ -27,21 +53,21 @@ body {
   /* Primary Button */
 
   .btn-primary {
-    @apply bg-brand-yellow text-brand-navy font-semibold px-6 py-3 rounded-lg transition duration-300;
+    @apply bg-brand-interactive text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out;
   }
 
   .btn-primary:hover {
-    @apply bg-brand-orange text-white;
+    @apply bg-brand-interactive-hover -translate-y-0.5 shadow-lg;
   }
 
   /* Secondary Button */
 
   .btn-secondary {
-    @apply bg-brand-orange text-white font-semibold px-6 py-3 rounded-lg transition duration-300;
+    @apply bg-brand-accent text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out;
   }
 
   .btn-secondary:hover {
-    @apply bg-brand-coral;
+    @apply bg-brand-accent-hover -translate-y-0.5 shadow-lg;
   }
 
   /* Section */
@@ -57,15 +83,15 @@ body {
   }
 
   .card {
-    @apply bg-white rounded-2xl shadow-lg p-8 transition duration-300;
+    @apply bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 ease-out;
   }
 
   .card:hover {
-    @apply -translate-y-2;
+    @apply -translate-y-2 shadow-xl;
   }
 
   .input-field {
-    @apply w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-brand-yellow;
+    @apply w-full border border-gray-300 rounded-lg p-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-interactive focus:border-brand-interactive;
   }
 }
 
@@ -81,4 +107,33 @@ body {
 
 .animate-scroll {
   animation: scroll 20s linear infinite;
+}
+
+/* Scroll-reveal */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.is-visible {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    animation: none;
+  }
 }

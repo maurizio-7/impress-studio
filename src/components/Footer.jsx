@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-brand-navy text-white">
+    <footer className="bg-brand-dark text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h2 className="text-2xl font-bold text-brand-yellow">
+            <h2 className="text-2xl font-bold text-brand-accent">
               <Link to="/">Kuleni</Link>
             </h2>
 
@@ -20,7 +20,7 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold text-brand-yellow">
+            <h3 className="text-lg font-semibold text-brand-accent">
               Services
             </h3>
 
@@ -37,21 +37,21 @@ function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold text-brand-yellow">Company</h3>
+            <h3 className="text-lg font-semibold text-brand-accent">Company</h3>
 
             <ul className="mt-4 space-y-3 text-gray-200">
               <li>
-                <Link to="/services" className="hover:text-brand-yellow">
+                <Link to="/services" className="hover:text-brand-interactive transition-colors duration-200">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="hover:text-brand-yellow">
+                <Link to="/portfolio" className="hover:text-brand-interactive transition-colors duration-200">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-brand-yellow">
+                <Link to="/contact" className="hover:text-brand-interactive transition-colors duration-200">
                   Contact
                 </Link>
               </li>
@@ -60,7 +60,7 @@ function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold text-brand-yellow">Contact</h3>
+            <h3 className="text-lg font-semibold text-brand-accent">Contact</h3>
 
             <ul className="mt-4 space-y-3 text-gray-200">
               <li>Lusaka, Zambia</li>

@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import ClientBanner from "../components/ClientBanner";
 import CallToAction from "../components/CallToAction";
+import Reveal from "../components/Reveal";
 
 function Home() {
   return (
@@ -10,9 +11,10 @@ function Home() {
       <ClientBanner />
 
       {/* Services Section */}
+      <Reveal>
       <section className="section bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-brand-navy">
+          <h2 className="text-4xl font-bold text-center text-brand-dark">
             Our Services
           </h2>
 
@@ -22,7 +24,7 @@ function Home() {
 
           <div className="mt-12 grid md:grid-cols-3 gap-8">
             <div className="card">
-              <h3 className="text-xl font-semibold text-brand-navy">
+              <h3 className="text-xl font-semibold text-brand-dark">
                 Business Profiles
               </h3>
 
@@ -33,7 +35,7 @@ function Home() {
             </div>
 
             <div className="card">
-              <h3 className="text-xl font-semibold text-brand-navy">
+              <h3 className="text-xl font-semibold text-brand-dark">
                 Business Branding
               </h3>
 
@@ -44,7 +46,7 @@ function Home() {
             </div>
 
             <div className="card">
-              <h3 className="text-xl font-semibold text-brand-navy">
+              <h3 className="text-xl font-semibold text-brand-dark">
                 Digital Business Cards
               </h3>
 
@@ -56,11 +58,13 @@ function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* Why Choose Us */}
-      <section className="section bg-gray-50">
+      <Reveal>
+      <section className="section bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-brand-navy text-center">
+          <h2 className="text-4xl font-bold text-brand-dark text-center">
             Why Choose Us?
           </h2>
 
@@ -95,40 +99,42 @@ function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* Process Section */}
+      <Reveal>
       <section className="section bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-brand-navy">
+          <h2 className="text-4xl font-bold text-center text-brand-dark">
             How It Works
           </h2>
 
           <div className="mt-12 grid md:grid-cols-4 gap-8">
             <div>
-              <span className="text-brand-yellow font-bold text-4xl">01</span>
-              <h3 className="mt-3 font-bold text-brand-navy text-xl">
+              <span className="text-brand-accent font-bold text-4xl">01</span>
+              <h3 className="mt-3 font-bold text-brand-dark text-xl">
                 Contact Us
               </h3>
               <p className="text-gray-600">Tell us about your business.</p>
             </div>
 
             <div>
-              <span className="text-brand-yellow font-bold text-4xl">02</span>
-              <h3 className="mt-3 font-bold text-brand-navy text-xl">Design</h3>
+              <span className="text-brand-accent font-bold text-4xl">02</span>
+              <h3 className="mt-3 font-bold text-brand-dark text-xl">Design</h3>
               <p className="text-gray-600">
                 We create your professional assets.
               </p>
             </div>
 
             <div>
-              <span className="text-brand-yellow font-bold text-4xl">03</span>
-              <h3 className="mt-3 font-bold text-brand-navy text-xl">Review</h3>
+              <span className="text-brand-accent font-bold text-4xl">03</span>
+              <h3 className="mt-3 font-bold text-brand-dark text-xl">Review</h3>
               <p className="text-gray-600">You provide feedback.</p>
             </div>
 
             <div>
-              <span className="text-brand-yellow font-bold text-4xl">04</span>
-              <h3 className="mt-3 font-bold text-brand-navy text-xl">
+              <span className="text-brand-accent font-bold text-4xl">04</span>
+              <h3 className="mt-3 font-bold text-brand-dark text-xl">
                 Delivery
               </h3>
               <p className="text-gray-600">Receive your finished materials.</p>
@@ -136,6 +142,7 @@ function Home() {
           </div>
         </div>
       </section>
+      </Reveal>
 
       {/* <CallToAction /> */}
     </div>
