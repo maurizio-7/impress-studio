@@ -9,7 +9,15 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 const { Pool } = pg;
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
+
+if (!resend) {
+  console.warn(
+    "RESEND_API_KEY not set — contact form will save to the database but skip sending a notification email.",
+  );
+}
 
 const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
 
@@ -59,12 +67,13 @@ app.post("/api/enquiries", async (req, res) => {
 
     res.status(201).json(result.rows[0]);
 
-    try {
-      await resend.emails.send({
-        from: "Kuleni Website <onboarding@resend.dev>",
-        to: process.env.NOTIFY_EMAIL,
-        subject: `New enquiry: ${name}${businessName ? ` (${businessName})` : ""}`,
-        text: `New contact form submission:
+    if (resend) {
+      try {
+        await resend.emails.send({
+          from: "Kuleni Website <onboarding@resend.dev>",
+          to: process.env.NOTIFY_EMAIL,
+          subject: `New enquiry: ${name}${businessName ? ` (${businessName})` : ""}`,
+          text: `New contact form submission:
 
 Name: ${name}
 Business: ${businessName || "-"}
@@ -74,9 +83,10 @@ Service: ${services}
 
 Message:
 ${message}`,
-      });
-    } catch (emailError) {
-      console.error("Failed to send notification email", emailError);
+        });
+      } catch (emailError) {
+        console.error("Failed to send notification email", emailError);
+      }
     }
   } catch (error) {
     console.error(error);
