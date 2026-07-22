@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CallToAction from "../components/CallToAction";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
 
 function Services() {
   const services = [
@@ -57,6 +58,10 @@ function Services() {
 
   return (
     <main>
+      <Seo
+        title="Services | Kuleni"
+        description="Business profiles, branding and custom websites, NFC/QR digital business cards, and custom solutions — explore Kuleni's services for Zambian businesses."
+      />
       {/* Services */}
       <Reveal>
 <section className="section bg-gray-50">
@@ -97,7 +102,7 @@ function Services() {
                     to="/contact"
                     className="mt-6 inline-block text-brand-interactive font-semibold hover:text-brand-interactive-hover transition-colors duration-200"
                   >
-                    Get in Touch →
+                    Get A Free Quote →
                   </Link>
                 )}
               </div>

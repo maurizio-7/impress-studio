@@ -42,7 +42,7 @@ function Hero() {
           <img
             src={heroImage}
             alt="Person scanning a QR Code"
-            className="w-full h-96 obect-cover"
+            className="w-full h-96 object-cover"
           />
         </div>
       </div>

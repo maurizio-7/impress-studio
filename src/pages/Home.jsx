@@ -3,10 +3,24 @@ import Hero from "../components/Hero";
 import ClientBanner from "../components/ClientBanner";
 import CallToAction from "../components/CallToAction";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
+import {
+  ProfileIcon,
+  BrandingIcon,
+  CardTapIcon,
+  SparkleIcon,
+  TagIcon,
+  BoltIcon,
+  PuzzleIcon,
+} from "../components/icons";
 
 function Home() {
   return (
     <div>
+      <Seo
+        title="Kuleni | Digital Presence for Zambian Businesses"
+        description="Kuleni helps Zambian businesses build a professional digital presence — business profiles, branding, custom websites, and NFC/QR digital business cards."
+      />
       <Hero />
       <ClientBanner />
 
@@ -24,6 +38,7 @@ function Home() {
 
           <div className="mt-12 grid md:grid-cols-3 gap-8">
             <div className="card">
+              <ProfileIcon />
               <h3 className="text-xl font-semibold text-brand-dark">
                 Business Profiles
               </h3>
@@ -35,6 +50,7 @@ function Home() {
             </div>
 
             <div className="card">
+              <BrandingIcon />
               <h3 className="text-xl font-semibold text-brand-dark">
                 Business Branding
               </h3>
@@ -46,6 +62,7 @@ function Home() {
             </div>
 
             <div className="card">
+              <CardTapIcon />
               <h3 className="text-xl font-semibold text-brand-dark">
                 Digital Business Cards
               </h3>
@@ -70,6 +87,7 @@ function Home() {
 
           <div className="mt-12 grid md:grid-cols-4 gap-6">
             <div className="card">
+              <SparkleIcon />
               <h3 className="font-bold text-xl">Professional Design</h3>
               <p className="mt-2 text-gray-600">
                 Premium designs that make your business look credible.
@@ -77,6 +95,7 @@ function Home() {
             </div>
 
             <div className="card">
+              <TagIcon />
               <h3 className="font-bold text-xl">Affordable</h3>
               <p className="mt-2 text-gray-600">
                 Solutions created for small businesses.
@@ -84,6 +103,7 @@ function Home() {
             </div>
 
             <div className="card">
+              <BoltIcon />
               <h3 className="font-bold text-xl">Fast Delivery</h3>
               <p className="mt-2 text-gray-600">
                 Receive your professional assets quickly.
@@ -91,6 +111,7 @@ function Home() {
             </div>
 
             <div className="card">
+              <PuzzleIcon />
               <h3 className="font-bold text-xl">Custom Solutions</h3>
               <p className="mt-2 text-gray-600">
                 Designed around your business needs.

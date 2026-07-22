@@ -5,13 +5,42 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Kuleni helps Zambian businesses build a professional digital presence — business profiles, branding, custom websites, and NFC/QR digital business cards."
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!--
+    Fonts load async (media=print trick) so they don't block first render,
+    and font-display is split per font to control layout shift:
+    - Fraunces (large above-the-fold headings): display=optional, so it either
+      loads in time or the fallback serif is used permanently — no visible
+      reflow of big heading text once the page has rendered.
+    - Inter (body text): display=swap, so it still applies on slow
+      connections; a small-text reflow is far less visually disruptive.
+  -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=optional"
+    media="print"
+    onload="this.media='all'"
   />
-  <title>Kuleni</title>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+    />
+  </noscript>
+
+  <title>Kuleni | Digital Presence for Zambian Businesses</title>
 </head>
 
 <body>

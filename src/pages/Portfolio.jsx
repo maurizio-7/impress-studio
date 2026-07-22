@@ -2,6 +2,7 @@ import React from "react";
 import CallToAction from "../components/CallToAction";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import Seo from "../components/Seo";
 
 function Portfolio() {
   const projects = [
@@ -32,6 +33,10 @@ function Portfolio() {
 
   return (
     <main>
+      <Seo
+        title="Portfolio | Kuleni"
+        description="See Kuleni's work — digital business profiles, NFC/QR business cards, and branding projects for Zambian businesses."
+      />
       {/* Hero Section */}
       <section className="py-24 px-6 bg-brand-dark">
         <div className="max-w-6xl mx-auto text-center">
@@ -211,7 +216,7 @@ function Portfolio() {
               to="/contact"
               className="px-8 py-4 btn-primary"
             >
-              Get Your Free Quote
+              Get A Free Quote
             </Link>
 
             <Link

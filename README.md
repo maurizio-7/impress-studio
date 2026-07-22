@@ -1,75 +1,89 @@
 # Kuleni
 
-A modern business website built with React to showcase digital identity solutions for businesses in Zambia. The platform helps businesses establish a professional online presence through digital business cards, QR code profiles, NFC-enabled cards, email signatures, and business guides.
+A modern business website for Kuleni, helping Zambian businesses establish a professional digital presence through business profiles, branding (including custom websites), and NFC/QR digital business cards.
 
 ## Features
 
-- Responsive modern design
+- Responsive modern design with a custom brand palette and typography
 - Home page with business overview
-- Services page
+- Services page with feature breakdowns per offering
 - Portfolio showcasing previous work
-- Contact page with enquiry form
+- Contact page with a working enquiry form (saves to a database, sends an email notification)
 - React Router navigation
 - Reusable React components
 - Mobile-friendly layout
 
 ## Built With
 
-- React
+**Frontend**
+
+- React + Vite
 - React Router
-- JavaScript (ES6+)
-- HTML5
-- CSS3
+- Tailwind CSS v4
+
+**Backend** (`backend/`)
+
+- Express
+- PostgreSQL (`pg`)
+- Resend (email notifications)
+
+**Hosting**
+
+- Frontend: Vercel
+- Backend + database: Render
 
 ## Services Offered
 
-- Digital Business Profiles
-- QR Code Business Cards
-- NFC Business Cards
-- Email Signatures
-- Business Guides
-- Digital Branding Solutions
+- Business Profiles
+- Business Branding (including website design & development)
+- Digital Business Cards (NFC + QR)
+- Custom Solutions
 
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/maurizio-7/impress-studio.git
+cd impress-studio
 ```
 
-Navigate into the project:
-
-```bash
-cd YOUR_REPOSITORY
-```
-
-Install dependencies:
+Install frontend dependencies:
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Start the frontend dev server:
 
 ```bash
 npm run dev
 ```
 
-Future Improvements
+### Backend setup
 
-- Backend contact form with email notifications
+The contact form talks to a separate Express server in `backend/`. To run it locally:
+
+```bash
+cd backend
+npm install
+cp .env.example .env   # fill in your own DB credentials, RESEND_API_KEY, NOTIFY_EMAIL
+npm start
+```
+
+See `.env.example` (both at the project root and in `backend/`) for the environment variables each side expects.
+
+## Future Improvements
+
 - CMS for portfolio management
 - Blog for SEO
-- Client testimonials
-- Online ordering for digital business cards
+- Client testimonials / social proof near the point of conversion
 - User authentication
 - Admin dashboard
 - Analytics integration
 
-Purpose
-This project was created to help businesses in Zambia establish a professional digital presence through affordable, modern branding solutions.
+## Purpose
 
-Web Developer | React Developer | Digital Solutions
+This project was created to help businesses in Zambia establish a professional digital presence through affordable, modern branding solutions.
 
 GitHub: https://github.com/maurizio-7

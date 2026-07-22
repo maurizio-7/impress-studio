@@ -18,7 +18,7 @@ function CallToAction() {
             to="/contact"
             className="mt-4 px-8 py-4 bg-white text-brand-interactive rounded-xl font-bold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
           >
-            Get Started
+            Get A Free Quote
           </Link>
         </div>
       </section>
