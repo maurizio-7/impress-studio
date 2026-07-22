@@ -9,7 +9,7 @@ function Footer() {
           {/* Brand */}
           <div>
             <h2 className="text-2xl font-bold text-brand-yellow">
-              <Link to="/">Kulani</Link>
+              <Link to="/">Kuleni</Link>
             </h2>
 
             <p className="mt-4 text-gray-200">
@@ -65,7 +65,7 @@ function Footer() {
             <ul className="mt-4 space-y-3 text-gray-200">
               <li>Lusaka, Zambia</li>
 
-              <li>info@kulani.com</li>
+              <li>info@kuleni.com</li>
 
               <li>+260 763 955 838</li>
             </ul>
@@ -75,7 +75,7 @@ function Footer() {
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-white/20 flex justify-center">
           <p className="text-gray-300 text-sm">
-            © {new Date().getFullYear()} Kulani. All rights reserved.
+            © {new Date().getFullYear()} Kuleni. All rights reserved.
           </p>
         </div>
       </div>

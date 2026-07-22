@@ -96,7 +96,7 @@ function Contact() {
               <div className="flex items-start gap-4">
                 <h3 className="font-semibold text-lg">📧 Email</h3>
 
-                <p className="text-gray-600">info@kulani.com</p>
+                <p className="text-gray-600">info@kuleni.com</p>
               </div>
 
               <div className="flex items-start gap-4">

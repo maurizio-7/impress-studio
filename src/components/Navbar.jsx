@@ -10,7 +10,7 @@ function Navbar() {
           {/* Logo */}
           <div>
             <h1 className="text-2xl font-bold text-white">
-              <Link to="/">Kulani</Link>
+              <Link to="/">Kuleni</Link>
             </h1>
           </div>
 

@@ -40,7 +40,7 @@ pool
   .catch((error) => console.error("Database connection failed", error));
 
 app.get("/", (req, res) => {
-  res.send("Impress Studio API is running");
+  res.send("Kuleni API is running");
 });
 
 app.post("/api/enquiries", async (req, res) => {

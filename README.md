@@ -1,4 +1,4 @@
-# Impress Studio
+# Kuleni
 
 A modern business website built with React to showcase digital identity solutions for businesses in Zambia. The platform helps businesses establish a professional online presence through digital business cards, QR code profiles, NFC-enabled cards, email signatures, and business guides.
 
