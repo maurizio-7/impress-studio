@@ -34,23 +34,23 @@ function Home() {
 
             <div className="card">
               <h3 className="text-xl font-semibold text-brand-navy">
-                Digital Business Cards
+                Business Branding
               </h3>
 
               <p className="mt-3 text-gray-600">
-                Modern business cards with QR codes and NFC technology that make
-                sharing your details effortless.
+                Improve your business identity with professional designs and a
+                custom website that build trust with customers.
               </p>
             </div>
 
             <div className="card">
               <h3 className="text-xl font-semibold text-brand-navy">
-                Branding Solutions
+                Digital Business Cards
               </h3>
 
               <p className="mt-3 text-gray-600">
-                Improve your business identity with professional designs that
-                build trust with customers.
+                Modern business cards with NFC and QR code technology that make
+                sharing your details effortless.
               </p>
             </div>
           </div>

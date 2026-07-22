@@ -6,10 +6,12 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const { Pool } = pg;
 
-app.use(cors());
+const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
+
+app.use(cors({ origin: frontendUrl }));
 app.use(express.json());
 
 const pool = new Pool({
@@ -18,6 +20,8 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
+  ssl:
+    process.env.DB_HOST === "localhost" ? false : { rejectUnauthorized: false },
 });
 
 pool

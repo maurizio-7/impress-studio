@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS enquiries (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  business_name VARCHAR,
+  email VARCHAR NOT NULL,
+  phone VARCHAR NOT NULL,
+  service VARCHAR NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -16,38 +16,26 @@ function Services() {
     },
 
     {
-      title: "Digital Business Cards",
-      description:
-        "Modern business cards designed to make networking easier through QR codes and NFC technology.",
-      features: [
-        "QR code integration",
-        "NFC-enabled solutions",
-        "Instant sharing",
-        "Professional design",
-      ],
-    },
-
-    {
       title: "Business Branding",
       description:
-        "Build a stronger identity with professional visual assets that help customers recognise and trust your business.",
+        "Build a stronger identity with professional visual assets and a custom-built website that help customers recognise and trust your business.",
       features: [
         "Brand identity design",
-        "Business materials",
+        "Website design & development",
         "Marketing assets",
         "Consistent visual style",
       ],
     },
 
     {
-      title: "Digital Presence Solutions",
+      title: "Digital Business Cards",
       description:
-        "Help your business become easier to discover and connect with through modern digital tools.",
+        "Modern business cards designed to make networking easier through NFC and QR code technology.",
       features: [
-        "Online business information",
-        "Digital contact solutions",
-        "Customer accessibility",
-        "Modern business tools",
+        "NFC-enabled solutions",
+        "QR code integration",
+        "Instant sharing",
+        "Professional design",
       ],
     },
   ];
@@ -288,7 +276,7 @@ function Services() {
                 Delivery
               </h3>
               <p className="mt-3 text-gray-600">
-                Receive your completed business assests.
+                Receive your completed business assets.
               </p>
             </div>
           </div>

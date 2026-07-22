@@ -1,0 +1,35 @@
+databases:
+  - name: impress-studio-db
+    plan: free
+
+services:
+  - type: web
+    name: impress-studio-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: FRONTEND_URL
+        value: https://impress-studio.vercel.app
+      - key: DB_USER
+        fromDatabase:
+          name: impress-studio-db
+          property: user
+      - key: DB_HOST
+        fromDatabase:
+          name: impress-studio-db
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: impress-studio-db
+          property: database
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: impress-studio-db
+          property: password
+      - key: DB_PORT
+        fromDatabase:
+          name: impress-studio-db
+          property: port

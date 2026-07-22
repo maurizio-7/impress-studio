@@ -23,29 +23,14 @@ function Contact() {
     });
   }
 
-  function handleServiceChange(event) {
-    const { value, checked } = event.target;
-
-    if (checked) {
-      setFormData({
-        ...formData,
-        services: [...formData.services, value],
-      });
-    } else {
-      setFormData({
-        ...formData,
-        services: formData.services.filter((service) => service !== value),
-      });
-    }
-  }
-
   async function handleSubmit(event) {
     event.preventDefault();
     setError("");
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/enquiries", {
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3000";
+      const response = await fetch(`${apiUrl}/api/enquiries`, {
         method: "POST",
 
         headers: {
@@ -238,10 +223,8 @@ function Contact() {
                       Select a service
                     </option>
                     <option>Business Profile</option>
+                    <option>Business Branding</option>
                     <option>Digital Business Card</option>
-                    <option>NFC Business Card</option>
-                    <option>QR Code Solution</option>
-                    <option>Branding</option>
                     <option>Multiple Services</option>
                   </select>
                 </div>

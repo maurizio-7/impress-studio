@@ -8,8 +8,8 @@ function Portfolio() {
       title: "Poultry Farm Digital Profile",
       category: "Business Profile",
       description:
-        "A professional digital profile designed to services, location and customer contact details.",
-      image: "/images/gfp.png",
+        "A professional digital profile designed to showcase services, location and customer contact details.",
+      image: "/images/gfp.jpg",
     },
 
     {
@@ -25,7 +25,7 @@ function Portfolio() {
       category: "Business Branding",
       description:
         "A professional business identity package created to improve credibility and customer trust.",
-      image: "/images/kwasha.png",
+      image: "/images/kwasha.jpg",
     },
   ];
 

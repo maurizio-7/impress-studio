@@ -13,9 +13,9 @@ function Hero() {
           </h1>
 
           <p className="mt-6 text-lg text-gray-200 max-w-xl">
-            From professional profiles and smart QR cards to business guides and
-            digital signatures, we help Zambian businesses get discovered,
-            verified, and connected.
+            From professional business profiles and branding — including
+            custom websites — to smart NFC and QR business cards, we help
+            Zambian businesses get discovered, verified, and connected.
           </p>
 
           <div className="mt-8 flex gap-4">

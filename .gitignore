@@ -1,5 +1,8 @@
 .env
 
+# AI assistant context files
+CLAUDE.md
+
 # Logs
 logs
 *.log
